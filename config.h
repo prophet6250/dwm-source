@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "cascadia code:size=11" };
+static const char dmenufont[]       = "cascadia code:size=11";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -19,11 +19,8 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	/* set keyboard repeat rate */
 	"zsh", "-c", "xset r rate 450 50", NULL,
-	/* start compton in background */
 	"zsh", "-c", "compton -b", NULL,
-	/* restore background wallpaper */
 	"zsh", "-c", "nitrogen --restore", NULL,
 	NULL /* terminate */
 };
@@ -36,9 +33,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class              instance    title       tags mask     isfloating   monitor */
+	{ "Galculator",       NULL,       NULL,       0,            1,           -1 },
+	{ "Gparted",          NULL,       NULL,       0,            1,           -1 },
+	{ "Lxappearance",     NULL,       NULL,       0,            1,           -1 },
+	{ "lightdm-settings", NULL,       NULL,       0,            1,           -1 },
+	{ "nitrogen",         NULL,       NULL,       0,            1,           -1 },
+	{ "pamac-manager",    NULL,       "Add/Remove Software",       0,            1,           -1 }
 };
 
 /* layout(s) */
