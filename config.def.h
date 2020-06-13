@@ -19,7 +19,12 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"st", NULL,
+	/* set keyboard repeat rate */
+	"zsh", "-c", "xset r rate 450 50", NULL,
+	/* start compton in background */
+	"zsh", "-c", "compton -b", NULL,
+	/* restore background wallpaper */
+	"zsh", "-c", "nitrogen --restore", NULL,
 	NULL /* terminate */
 };
 
