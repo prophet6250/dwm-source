@@ -2295,7 +2295,7 @@ centeredfloatingmaster(Monitor *m)
 		my = myo = 0;
 	}
 
-	for(i = tx = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i+)
+	for(i = tx = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
 	if (i < m->nmaster) {
 		/* nmaster clients are stacked horizontally, in the center
 		 * of the screen */
